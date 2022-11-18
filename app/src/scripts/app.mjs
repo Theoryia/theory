@@ -1,4 +1,4 @@
-import { prepareListeners } from "./src/prepareListeners.mjs"
+import { prepareListeners } from "./prepareListeners.mjs"
 import { mainPageRequisits } from "./mainPage.mjs";
 
 function init() {
