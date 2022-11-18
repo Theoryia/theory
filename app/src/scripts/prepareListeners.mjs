@@ -1,4 +1,4 @@
-import { queryTitleSize } from "./client/mainPage.mjs";
+import { queryTitleSize } from "./mainPage.mjs";
 
 export function prepareListeners(){
     const dropdown = 
