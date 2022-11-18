@@ -24,7 +24,8 @@ export function queryTitleSize() {
         console.log("change less");
         isLess = true;
         console.log(isLess);
-        shrinkTitle()
+        closeNav()
+        shrinkHomeTitle()
 //screen size check,
     } else if (width > 1100 && isLess != false) {
         console.log(`${isLess} prev`)
@@ -32,15 +33,20 @@ export function queryTitleSize() {
         isLess = false;
         console.log(isLess);
         closeNav();
-        regenerateTitle();
+        regenerateHomeTitle();
     } else {
         return;
     }
     
 }
 
+function queryPage(){
+    const url = window.location.toString();
+    return url;
+}
+
 let title = document.querySelector('#title')
-function shrinkTitle(){
+function shrinkHomeTitle(){
     setTimeout(() => {title.textContent = "tHeo kindeR"}, 100)
     setTimeout(() => {title.textContent = "tHeo kinde_"}, 200)
     setTimeout(() => {title.textContent = "tHe_ kinde"}, 300)
@@ -54,7 +60,7 @@ function shrinkTitle(){
     setTimeout(() => {title.textContent = "t k"}, 1100)
 }
 
-function regenerateTitle(){
+function regenerateHomeTitle(){
     setTimeout(() => {title.textContent = "t k"}, 100)
     setTimeout(() => {title.textContent = "t k_"}, 200)
     setTimeout(() => {title.textContent = "t_ ki"}, 300)
@@ -69,7 +75,7 @@ function regenerateTitle(){
 }
 
 
-// function shrinkTitle(){
+// function shrinkHomeTitle(){
 //     let i;
 //     console.log(title.textContent);
 //     toArray(title.textContent);
