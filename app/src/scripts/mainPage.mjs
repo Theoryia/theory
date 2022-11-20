@@ -1,3 +1,5 @@
+// import { query } from "express";
+let title = document.querySelector('.title')
 let isLess;
 let width;
 
@@ -17,15 +19,38 @@ function openNav() {
     return;
   }
 
-export function queryTitleSize() {
+  function queryPage(condition){ 
+    const url = window.location.toString();
+    console.log(url)
+    console.log(url.includes("index"))
+        if (url.includes("index") == true){
+            console.log("index")
+            changeHomeTitle(condition) //TODO change name of file
+        }else if (url.includes("contact") == true) {
+            console.log("contact")
+            changeContactTitle(condition)
+        }
+    }
+
+export function onLoadWindowSize(){
     document.querySelector('title');
     width = window.innerWidth;
     if (width <= 1100 && isLess != true){
+        queryPage("setShrink")  
+    }else{
+        title.style.color="#61892F"
+    }
+}
+
+export function queryTitleSize() {
+    document.querySelector('title');
+    width = window.innerWidth;
+    if (width <= 1100 && isLess != true){ //TODO on refresh a bug occurs where it will regen and shrink (add && clause to see if already small?)
         console.log("change less");
         isLess = true;
         console.log(isLess);
         closeNav()
-        shrinkHomeTitle()
+        queryPage("shrink")
 //screen size check,
     } else if (width > 1100 && isLess != false) {
         console.log(`${isLess} prev`)
@@ -33,47 +58,70 @@ export function queryTitleSize() {
         isLess = false;
         console.log(isLess);
         closeNav();
-        regenerateHomeTitle();
+        queryPage("regen")
     } else {
         return;
     }
     
 }
 
-function queryPage(){
-    const url = window.location.toString();
-    return url;
+
+
+
+function changeHomeTitle(condition){
+    if(condition == "shrink"){
+        setTimeout(() => {title.textContent = "tHeo kindeR"}, 100)
+        setTimeout(() => {title.textContent = "tHeo kinde_"}, 200)
+        setTimeout(() => {title.textContent = "tHe_ kinde"}, 300)
+        setTimeout(() => {title.textContent = "tHe kind_"}, 400)
+        setTimeout(() => {title.textContent = "tHe kind"}, 500)
+        setTimeout(() => {title.textContent = "tH_ kin_"}, 600)
+        setTimeout(() => {title.textContent = "tH kin"}, 700)
+        setTimeout(() => {title.textContent = "tH ki_"}, 800)
+        setTimeout(() => {title.textContent = "t_ ki"}, 900)
+        setTimeout(() => {title.textContent = "t k_"}, 1000)
+        setTimeout(() => {title.textContent = "t k"}, 1100)
+    }else if (condition == "regen"){
+        setTimeout(() => {title.textContent = "t k"}, 100)
+        setTimeout(() => {title.textContent = "t k_"}, 200)
+        setTimeout(() => {title.textContent = "t_ ki"}, 300)
+        setTimeout(() => {title.textContent = "tH ki_"}, 400)
+        setTimeout(() => {title.textContent = "tH kin"}, 500)
+        setTimeout(() => {title.textContent = "tH_ kin_"}, 600)
+        setTimeout(() => {title.textContent = "tHe kind"}, 700)
+        setTimeout(() => {title.textContent = "tHe kind_"}, 800)
+        setTimeout(() => {title.textContent = "tHe_ kinde"}, 900)
+        setTimeout(() => {title.textContent = "tHeo kinde_"}, 1000)
+        setTimeout(() => {title.textContent = "tHeo kindeR"}, 1100)
+    }else if (condition == "setRegen"){
+        title.textContent = "tHeo kindeR"
+    }else if (condition == "setShrink"){
+        title.textContent = "t k"
+        title.style.color="#61892F"
+    }
+    
 }
 
-let title = document.querySelector('#title')
-function shrinkHomeTitle(){
-    setTimeout(() => {title.textContent = "tHeo kindeR"}, 100)
-    setTimeout(() => {title.textContent = "tHeo kinde_"}, 200)
-    setTimeout(() => {title.textContent = "tHe_ kinde"}, 300)
-    setTimeout(() => {title.textContent = "tHe kind_"}, 400)
-    setTimeout(() => {title.textContent = "tHe kind"}, 500)
-    setTimeout(() => {title.textContent = "tH_ kin_"}, 600)
-    setTimeout(() => {title.textContent = "tH kin"}, 700)
-    setTimeout(() => {title.textContent = "tH ki_"}, 800)
-    setTimeout(() => {title.textContent = "t_ ki"}, 900)
-    setTimeout(() => {title.textContent = "t k_"}, 1000)
-    setTimeout(() => {title.textContent = "t k"}, 1100)
-}
+function changeContactTitle(condition){
+    if(condition == "shrink"){
+        setTimeout(() => {title.textContent = "contAct Me"}, 0)
+        setTimeout(() => {title.textContent = "cont_ct Me"}, 100)
+        setTimeout(() => {title.textContent = "contct Me"}, 200)
+        setTimeout(() => {title.textContent = "cont_t Me"}, 300)
+        setTimeout(() => {title.textContent = "contt Me"}, 400)
+        setTimeout(() => {title.textContent = "cont_ Me"}, 500)
+        setTimeout(() => {title.textContent = "cont. Me"}, 600)
 
-function regenerateHomeTitle(){
-    setTimeout(() => {title.textContent = "t k"}, 100)
-    setTimeout(() => {title.textContent = "t k_"}, 200)
-    setTimeout(() => {title.textContent = "t_ ki"}, 300)
-    setTimeout(() => {title.textContent = "tH ki_"}, 400)
-    setTimeout(() => {title.textContent = "tH kin"}, 500)
-    setTimeout(() => {title.textContent = "tH_ kin_"}, 600)
-    setTimeout(() => {title.textContent = "tHe kind"}, 700)
-    setTimeout(() => {title.textContent = "tHe kind_"}, 800)
-    setTimeout(() => {title.textContent = "tHe_ kinde"}, 900)
-    setTimeout(() => {title.textContent = "tHeo kinde_"}, 1000)
-    setTimeout(() => {title.textContent = "tHeo kindeR"}, 1100)
+    }else if (condition == "regen"){
+        setTimeout(() => {title.textContent = "cont. Me"}, 0)
+        setTimeout(() => {title.textContent = "cont_ Me"}, 100)
+        setTimeout(() => {title.textContent = "contt Me"}, 200)
+        setTimeout(() => {title.textContent = "cont_t Me"}, 300)
+        setTimeout(() => {title.textContent = "contct Me"}, 400)
+        setTimeout(() => {title.textContent = "cont_ct Me"}, 500)
+        setTimeout(() => {title.textContent = "contAct Me"}, 600)
+    }
 }
-
 
 // function shrinkHomeTitle(){
 //     let i;
