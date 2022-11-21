@@ -9,6 +9,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
     
     <title>Contact | Theo Kinder</title>
 
@@ -23,6 +26,19 @@
         <input type="image" id="dropdown" class="hidden dropdownBtn" onclick="openNav()" src="./assets/Gmenu_FILL0_wght400_GRAD0_opsz40.png">
    
     </div>
+    </section>
+
+
+    <section class="contIn" id="contactForm">
+      <h1 class="para2 contIn">full name</h1>
+      <input type="text" class="smallContactInput contIn" placeholder="John Smith"> 
+      <h1 class="para2 contIn">email</h1>
+      <input type="text" class="smallContactInput contIn" placeholder="sample@email.com"> 
+      <h1 class="para2 contIn">message</h1>
+      <textarea rows="9" cols="5" class="contactInput contIn"></textarea>
+      <button type="button" class="contIn" id="submitButton">Submit</button>
+      
+
     </section>
     
     
@@ -44,8 +60,8 @@
       
       <script>
         function openNav() {
-          document.getElementById("mySidebar").style.width = "250px";
-          document.getElementById("main").style.marginRight = "250px";
+          document.getElementById("mySidebar").style.width = "185px";
+          document.getElementById("main").style.marginRight = "185px";
         }
         
         function closeNav() {

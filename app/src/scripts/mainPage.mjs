@@ -7,6 +7,21 @@ export function mainPageRequisits(){
     //getStartWidth();
 }
 
+export function buttonClick(para){
+    const button = document.querySelector('#submitButton')
+    button.style.background = "#222629"
+    button.style.color = "#61892f"
+    button.style.border = "thin solid #61892f"
+    
+    setTimeout(() => {
+        button.style.color = "black"
+        button.style.border = "0px solid white" 
+        button.style.background = "#61892f"
+        
+        
+        }, 100)
+}   
+
 function openNav() {
     document.getElementById("mySidebar").style.width = "250px";
     document.getElementById("main").style.marginRight = "250px";
@@ -65,9 +80,6 @@ export function queryTitleSize() {
     
 }
 
-
-
-
 function changeHomeTitle(condition){
     if(condition == "shrink"){
         setTimeout(() => {title.textContent = "tHeo kindeR"}, 100)
@@ -120,8 +132,14 @@ function changeContactTitle(condition){
         setTimeout(() => {title.textContent = "contct Me"}, 400)
         setTimeout(() => {title.textContent = "cont_ct Me"}, 500)
         setTimeout(() => {title.textContent = "contAct Me"}, 600)
-    }
+    }else if (condition == "setRegen"){
+        title.textContent = "contAct Me"
+    }else if (condition == "setShrink"){
+        title.textContent = "cont. Me"
+        title.style.color="#61892F"
+    }    
 }
+
 
 // function shrinkHomeTitle(){
 //     let i;
