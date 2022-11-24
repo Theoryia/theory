@@ -1,5 +1,4 @@
 import { queryTitleSize } from "./mainPage.mjs";
-import { contactInit } from "./contact.mjs"
 
 const mel = {};
 
