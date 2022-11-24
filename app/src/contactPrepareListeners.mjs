@@ -9,5 +9,5 @@ export function contactHandles() {
 
 export function contactListeners() {
   window.addEventListener("resize", queryTitleSize);
-  cel.submitButton.addEventListener("click", console.log("click"));
+  cel.submitButton.addEventListener("click", buttonClick);
 }

@@ -11,6 +11,6 @@ export function mainHandles() {
 }
 
 export function mainListeners() {
-  // mel.contactlink.addEventListener("click", contactInit)
+  //mel.contactlink.addEventListener("click", contactInit)
   window.addEventListener("resize", queryTitleSize);
 }

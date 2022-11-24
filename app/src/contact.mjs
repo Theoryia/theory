@@ -1,15 +1,15 @@
 import { contactHandles, contactListeners } from "./contactPrepareListeners.mjs"
-import { init } from "./main.mjs"
+import { error, success} from "./email.mjs"
+import { onLoadWindowSize } from "./mainPage.mjs"
 
 export function contactInit(){
-    // window.close('../app/index.html')
-    // window.open('../app/contact.html')
+    
     contactHandles()
     contactListeners()
-    init()
-    
+    onLoadWindowSize()
     console.log(`contact`);
-    
+    contactHandles()
+    contactListeners()
 }
 
 
@@ -19,14 +19,14 @@ export function buttonClick(para){
     button.style.background = "#222629"
     button.style.color = "#61892f"
     button.style.border = "thin solid #61892f"
-    error()
+    setTimeout(() => {success()}, 200)
     setTimeout(() => {
         button.style.color = "black"
         button.style.border = "0px solid white" 
         button.style.background = "#61892f"
         
         
-        }, 100)
+        }, 50)
 }  
 
 
