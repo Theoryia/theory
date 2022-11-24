@@ -1,4 +1,4 @@
-import Swal from '/Website/node_modules/sweetalert2/dist/sweetalert2.js';
+import Swal from '/Website/node_modules/sweetalert2/src/sweetalert2.js';
 
 export function sendMail(){
   const emailParamenters = {
