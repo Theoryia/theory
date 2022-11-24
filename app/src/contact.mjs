@@ -1,6 +1,6 @@
 import { contactHandles, contactListeners } from "./contactPrepareListeners.mjs"
-import { error, success} from "./email.mjs"
 import { onLoadWindowSize } from "./mainPage.mjs"
+import { sendMail } from "./email.mjs"
 
 export function contactInit(){
     
@@ -19,13 +19,11 @@ export function buttonClick(para){
     button.style.background = "#222629"
     button.style.color = "#61892f"
     button.style.border = "thin solid #61892f"
-    setTimeout(() => {success()}, 200)
+    setTimeout(() => {sendMail()}, 200)
     setTimeout(() => {
         button.style.color = "black"
         button.style.border = "0px solid white" 
         button.style.background = "#61892f"
-        
-        
         }, 50)
 }  
 

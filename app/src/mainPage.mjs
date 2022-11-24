@@ -40,9 +40,10 @@ export function onLoadWindowSize(){
         title.style.color="#61892F"
     }
 }
+//TODO needs to be done for contact page :3
 
 function changeToContact(){
-    
+
 }
 
 export function queryTitleSize() {

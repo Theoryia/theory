@@ -7,6 +7,10 @@ html {
 body {
   background-color: #222629;
 }
+
+.swal-modal {
+  font-family: Helvetica;
+}
 /* @media screen and (max-width: 650px) {
     .title {
         font-size: 500%;
@@ -55,7 +59,7 @@ body {
 #contactForm {
   padding-left: 10%;
   right: 40%;
-  top: 30%;
+  padding-top: 5.5vw;
   font-family: "Major Mono Display", monospace;
 }
 
@@ -103,6 +107,7 @@ body {
 }
 
 #submitButton:hover{
+  cursor: pointer;
   background-color: #3f5820;
 }
 
