@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link rel="stylesheet" href="./app/style.css" />
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Major+Mono+Display&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="/Website/node_modules/sweetalert2/dist/sweetalert2.css"
+  />
+
+  <title>Contact | Theo Kinder</title>
+
+  <section id="main" class="nav">
+    <h1 id="contactTitle" class="title">contAct</h1>
+
+    <div class="navlink">
+      <a class="topnav" href="./index.html">Home</a>
+      <a class="topnav" href="https://github.com/Theoryia">WoRk</a>
+      <a class="topnav" href="">stuff</a>
+      <input
+        type="image"
+        id="dropdown"
+        class="hidden dropdownBtn"
+        onclick="openNav()"
+        src="./assets/Gmenu_FILL0_wght400_GRAD0_opsz40.png"
+      />
+    </div>
+  </section>
+
+  <section class="contIn" id="contactForm">
+    <h1 class="para2 contIn">full name</h1>
+    <input
+      id="name"
+      type="text"
+      class="smallContactInput contIn"
+      placeholder="Enter your name"
+    />
+    <h1 class="para2 contIn">email</h1>
+    <input
+      type="text"
+      id="email"
+      class="smallContactInput contIn"
+      placeholder="Enter your Email"
+    />
+    <h1 class="para2 contIn">message</h1>
+    <textarea
+      rows="9"
+      cols="5"
+      id="message"
+      class="contactInput contIn"
+    ></textarea>
+    <button type="button" class="contIn" id="submitButton">Submit</button>
+  </section>
+
+  <!-- <section>
+        <img src="/client/assets/Picture1-removebg-preview.png"></img>
+
+    </section> -->
+
+  <div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"
+      >&times;</a
+    >
+    <a href="./index.html">Home</a>
+    <a href="https://github.com/Theoryia">WoRk</a>
+    <a href="#">stuff</a>
+  </div>
+  <script
+    type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"
+  ></script>
+  <script src="./app/contact.mjs" type="module"></script>
+
+  <script type="text/javascript">
+    (function () {
+      emailjs.init("service_48kbjrt");
+    })();
+  </script>
+
+  <!-- <script src="./src/contact.mjs" type="module"></script> -->
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidebar").style.width = "185px";
+      document.getElementById("main").style.marginRight = "185px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidebar").style.width = "0";
+      document.getElementById("main").style.marginRight = "0";
+    }
+  </script>
+</html>
