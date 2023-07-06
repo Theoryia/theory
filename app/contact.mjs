@@ -1,6 +1,6 @@
 import { contactHandles, contactListeners } from "./contactPrepareListeners.mjs"
 import { onLoadWindowSize } from "./mainPage.mjs"
-import { sendMail } from "./email.mjs"
+import { sendMail } from "../email.mjs"
 
 export function contactInit(){
     
