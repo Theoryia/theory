@@ -3,7 +3,7 @@ let isLess;
 let width;
 
 export function mainPageRequisits(){
-    //getStartWidth();
+    //getStartWidTh();
 }
  
 function openNav() {
@@ -11,7 +11,7 @@ function openNav() {
     document.getElementById("main").style.marginRight = "250px";
   }
   
-  /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+  /* Set The widTh of The sidebar to 0 and The left margin of The page content to 0 */
 function closeNav() {
     document.getElementById("mySidebar").style.width = "0";
     document.getElementById("main").style.marginRight = "0";
@@ -37,7 +37,7 @@ export function onLoadWindowSize(){
     if (width <= 1100 && isLess != true){
         queryPage("setShrink")  
     }else{
-        title.style.color="#61892F"
+        title.style.color="#45502A"
     }
 }
 //TODO needs to be done for contact page :3
@@ -49,13 +49,13 @@ function changeToContact(){
 export function queryTitleSize() {
     document.querySelector('title');
     width = window.innerWidth;
-    if (width <= 1100 && isLess != true){ //TODO on refresh a bug occurs where it will regen and shrink (add && clause to see if already small?)
+    if (width <= 1100 && isLess != true){ //TODO on refresh a bug occurs where it will regen and shrinK (add && clause to see if already small?)
         console.log("change less");
         isLess = true;
         console.log(isLess);
         closeNav()
         queryPage("shrink")
-//screen size check,
+//screen size checK,
     } else if (width > 1100 && isLess != false) {
         console.log(`${isLess} prev`)
         console.log("change more");
@@ -71,34 +71,34 @@ export function queryTitleSize() {
 
 function changeHomeTitle(condition){
     if(condition == "shrink"){
-        setTimeout(() => {title.textContent = "tHeo kindeR"}, 100)
-        setTimeout(() => {title.textContent = "tHeo kinde_"}, 200)
-        setTimeout(() => {title.textContent = "tHe_ kinde"}, 300)
-        setTimeout(() => {title.textContent = "tHe kind_"}, 400)
-        setTimeout(() => {title.textContent = "tHe kind"}, 500)
-        setTimeout(() => {title.textContent = "tH_ kin_"}, 600)
-        setTimeout(() => {title.textContent = "tH kin"}, 700)
-        setTimeout(() => {title.textContent = "tH ki_"}, 800)
-        setTimeout(() => {title.textContent = "t_ ki"}, 900)
-        setTimeout(() => {title.textContent = "t k_"}, 1000)
-        setTimeout(() => {title.textContent = "t k"}, 1100)
+        setTimeout(() => {title.textContent = "Theo Kinder"}, 100)
+        setTimeout(() => {title.textContent = "Theo Kinde_"}, 200)
+        setTimeout(() => {title.textContent = "The_ Kinde"}, 300)
+        setTimeout(() => {title.textContent = "The Kind_"}, 400)
+        setTimeout(() => {title.textContent = "The Kind"}, 500)
+        setTimeout(() => {title.textContent = "Th_ Kin_"}, 600)
+        setTimeout(() => {title.textContent = "Th Kin"}, 700)
+        setTimeout(() => {title.textContent = "Th Ki_"}, 800)
+        setTimeout(() => {title.textContent = "T_ Ki"}, 900)
+        setTimeout(() => {title.textContent = "T K_"}, 1000)
+        setTimeout(() => {title.textContent = "T K"}, 1100)
     }else if (condition == "regen"){
-        setTimeout(() => {title.textContent = "t k"}, 100)
-        setTimeout(() => {title.textContent = "t k_"}, 200)
-        setTimeout(() => {title.textContent = "t_ ki"}, 300)
-        setTimeout(() => {title.textContent = "tH ki_"}, 400)
-        setTimeout(() => {title.textContent = "tH kin"}, 500)
-        setTimeout(() => {title.textContent = "tH_ kin_"}, 600)
-        setTimeout(() => {title.textContent = "tHe kind"}, 700)
-        setTimeout(() => {title.textContent = "tHe kind_"}, 800)
-        setTimeout(() => {title.textContent = "tHe_ kinde"}, 900)
-        setTimeout(() => {title.textContent = "tHeo kinde_"}, 1000)
-        setTimeout(() => {title.textContent = "tHeo kindeR"}, 1100)
+        setTimeout(() => {title.textContent = "T K"}, 100)
+        setTimeout(() => {title.textContent = "T K_"}, 200)
+        setTimeout(() => {title.textContent = "T_ Ki"}, 300)
+        setTimeout(() => {title.textContent = "Th Ki_"}, 400)
+        setTimeout(() => {title.textContent = "Th Kin"}, 500)
+        setTimeout(() => {title.textContent = "Th_ Kin_"}, 600)
+        setTimeout(() => {title.textContent = "The Kind"}, 700)
+        setTimeout(() => {title.textContent = "The Kind_"}, 800)
+        setTimeout(() => {title.textContent = "The_ Kinde"}, 900)
+        setTimeout(() => {title.textContent = "Theo Kinde_"}, 1000)
+        setTimeout(() => {title.textContent = "Theo Kinder"}, 1100)
     }else if (condition == "setRegen"){
-        title.textContent = "tHeo kindeR"
+        title.textContent = "Theo Kinder"
     }else if (condition == "setShrink"){
-        title.textContent = "t k"
-        title.style.color="#61892F"
+        title.textContent = "T K"
+        title.style.color="#45502A"
     }
     
 }
@@ -122,21 +122,21 @@ function changeContactTitle(condition){
         setTimeout(() => {title.textContent = "cont_ct Me"}, 500)
         setTimeout(() => {title.textContent = "contAct Me"}, 600)
     }else if (condition == "setRegen"){
-        title.textContent = "contAct Me"
+        title.textContent = "contact Me"
     }else if (condition == "setShrink"){
         title.textContent = "cont. Me"
-        title.style.color="#61892F"
+        title.style.color="#45502A"
     }    
 }
 
 
-// function shrinkHomeTitle(){
+// function shrinKHomeTitle(){
 //     let i;
 //     console.log(title.textContent);
 //     toArray(title.textContent);
 //     console.log(arr)
-//     while(arr.length>2){
-//         for(i=0; i<arr.length; i++){
+//     while(arr.lengTh>2){
+//         for(i=0; i<arr.lengTh; i++){
 //             if(arr[i] == ' '){
 //                 console.log(`space at ${i}`)
 //                 console.log(`${arr} hmmmm?`)
@@ -160,7 +160,7 @@ function changeContactTitle(condition){
 //     }else{
 //         console.log("Not Changing");
 //     }
-//     if(location-1 != 'k'){
+//     if(location-1 != 'K'){
 //         array.splice(location-1,1,"_");
 //         title.textContent = array.join("");
 //         array.splice(location-1,1);
@@ -175,5 +175,5 @@ function changeContactTitle(condition){
 
 // array.splice(location-1,1,"_");
 // title.textContent = array.join("");
-// array.splice(array.length-1,1,"_");
+// array.splice(array.lengTh-1,1,"_");
 // title.textContent = array.join("");

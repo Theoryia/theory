@@ -5,12 +5,9 @@ html {
 }
 
 body {
-  background-color: #222629;
+  background-color: #fbfaf2;
 }
 
-.swal-modal {
-  font-family: Helvetica;
-}
 /* @media screen and (max-width: 650px) {
     .title {
         font-size: 500%;
@@ -35,7 +32,6 @@ body {
     border-color: black;
 } */
 .nav {
-  font-family: "Major Mono Display", monospace;
   list-style-type: none;
   margin: 0;
   padding: 0;
@@ -47,20 +43,24 @@ body {
 }
 
 .title {
-  font-size: 500%;
-  color: #61892f;
+  font-family: 'Nova Mono', cursive;
+  font-weight: 100;
+  font-size: 450%;
+  color: #45502A;
   margin-top: 0%;
   margin-bottom: 0%;
-  margin-left: 4%;
+  margin-left: 1%;
   width: 3%;
   right: 0;
+  height: 5%;
+  line-height: 1;
 }
 
 #contactForm {
   padding-left: 10%;
   right: 40%;
   padding-top: 5.5vw;
-  font-family: "Major Mono Display", monospace;
+  font-family: 'Nova Mono', monospace;
 }
 
 .contIn {
@@ -73,18 +73,18 @@ body {
 }
 
 .para {
-  color: #61892f;
+  color: #161212;
   display: inline-flex;
   /* margin-left: 8%; */
   position: relative;
   font-family: "Major Mono Display", monospace;
   font-weight: bold;
   left: 0;
-  left: 5.5%;
+  left: 1%;
   width: 5%; /*TODO add width cos main page brokey lol */
 }
 .para2 {
-  color: #61892f;
+  color: #161212;
   display: inline-flex;
   position: relative;
   font-family: "Major Mono Display", monospace;
@@ -92,54 +92,6 @@ body {
   left: 0;
   width: 15rem;
 }
-
-#submitButton {
-  background-color: #61892f;
-  border: solid #222629;
-  font-family: 'Roboto Mono', monospace;
-  font-size: 2rem;
-  font-weight: 600;
-  min-width: 10rem;
-  max-width: 10rem;
-  border-radius: 5px;
-  margin-top: 1rem;
-  
-}
-
-#submitButton:hover{
-  cursor: pointer;
-  background-color: #3f5820;
-}
-
-.contactInput {
-  left: 40%;
-  width: 75%;
-  font-size: 1rem;
-  font-family: 'Roboto Mono', monospace;
-  background-color: #202020;
-  color: white;
-  outline: none;
-  border: 0.1px solid;
-  
-  
-}
-
-.smallContactInput {
-  width: 20rem;
-  height: 2.5rem;
-  font-size: 1rem;
-  font-family: 'Roboto Mono', monospace;
-  background-color: #202020;
-  color: white;
-  border-style: solid;
-  text-align: center;
-  outline: none;
-  
-}
-
-
-
-
 
 
 
@@ -154,6 +106,7 @@ body {
 } */
 
 .navlink {
+  font-family: 'Nova Mono', monospace;
   display: inline-flex;
   margin-right: 10vw;
   right: 0;
@@ -169,7 +122,7 @@ body {
   background-repeat: no-repeat;
   background-size: 0% 0.2vw;
   transition: background-size cubic-bezier(0, 0.5, 0, 1) 0.3s;
-  color: #6b6e70;
+  color: #161212; /*change*/
   font-size: 40px;
   padding-left: 3%;
   padding-right: 3%;
@@ -191,7 +144,7 @@ a:focus {
   z-index: 1; /* Stay on top */
   top: 0;
   right: 0;
-  background-color: #474b4f; /* Black*/
+  background-color: #4F5D2F; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
@@ -200,18 +153,19 @@ a:focus {
 
 /* The sidebar links */
 .sidebar a {
+  font-family: 'Nova Mono', monospace;
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 30px;
-  color: #61892f;
-  font-weight: 100;
+  color: #fbfaf2;
+  font-weight: 300;
   display: block;
   transition: 0.3s;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidebar a:hover {
-  color: #f1f1f1;
+  color: #797979;
 }
 
 /* Position and style the close button (top right corner) */
@@ -232,7 +186,7 @@ a:focus {
 /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
 #main {
   transition: margin-right 0.5s; /* If you want a transition effect */
-  padding: 20px;
+  padding: 0px;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
