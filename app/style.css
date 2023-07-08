@@ -32,6 +32,11 @@ body {
   flex: 1 0 200px;
 }
 
+.workh3 {
+  margin-top: 0%;
+  margin-bottom: 4%;
+}
+
 .workContainer {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -43,9 +48,14 @@ body {
   overflow: hidden;
 }
 
+#collatz {
+  width: auto;
+  height: width/2;
+}
+
 .item img {
-  width: 100%;
-  height: auto;
+  width: 30vw;
+  height: 30vh;
   transition: transform 0.3s ease;
 }
 
@@ -65,7 +75,7 @@ body {
 }
 
 .item:hover img {
-  transform: scale(2);
+  transform: scale(1.2);
 }
 
 .item:hover .overlay {
@@ -177,6 +187,7 @@ body {
   font-weight: 500;
   font-size: 1.25rem;
   flex-basis: 50%;
+  padding-bottom: 1%;
 }
 
 .navlink {
@@ -215,20 +226,20 @@ a:focus {
 /* The sidebar menu */
 .sidebar {
   height: 100%; /* 100% Full-height */
-  width: 0; /* 0 width - change this with JavaScript */
+  width: 0; 
   position: fixed; /* Stay in place */
   z-index: 1; /* Stay on top */
   top: 0;
   right: 0;
-  background-color: #4f5d2f; /* Black*/
+  background-color: #45502a; /* Black*/
   overflow-x: hidden; /* Disable horizontal scroll */
   padding-top: 60px; /* Place content 60px from the top */
   transition: 0.5s; /* 0.5 second transition effect to slide in the sidebar */
-  font-family: "Major Mono Display", monospace;
 }
 
 /* The sidebar links */
 .sidebar a {
+
   font-family: "Nova Mono", monospace;
   padding: 8px 8px 8px 32px;
   text-decoration: none;
