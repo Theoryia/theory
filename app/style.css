@@ -37,25 +37,35 @@ body {
   margin-bottom: 4%;
 }
 
+@media (max-width:600px) {
+  .workContainer {
+    flex-direction: column;
+  }
+}
+
 .workContainer {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   grid-gap: 10px;
 }
 
+
+
 .item {
   position: relative;
-  overflow: hidden;
+  overflow: visible; /* or 'auto' */
 }
 
 #collatz {
   width: auto;
-  height: width/2;
+  height: calc(100% / 2);
 }
 
 .item img {
-  width: 30vw;
-  height: 30vh;
+  width: 100%; /* Adjusted to use percentage width */
+  height: auto; /* Use auto height to maintain aspect ratio */
+  min-width: 200px; /* Set a minimum width for the image */
   transition: transform 0.3s ease;
 }
 
@@ -75,7 +85,7 @@ body {
 }
 
 .item:hover img {
-  transform: scale(1.2);
+  transform: scale(1.01);
 }
 
 .item:hover .overlay {
@@ -297,7 +307,7 @@ a:focus {
 }
 
 @media screen and (max-width: 1100px) {
-  a {
+  .topnav {
     display: none;
   }
 }
