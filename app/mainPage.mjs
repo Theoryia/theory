@@ -71,6 +71,7 @@ export function queryTitleSize() {
 
 function changeHomeTitle(condition){
     if(condition == "shrink"){
+        console.log("Shinkings")
         setTimeout(() => {title.textContent = "Theo Kinder"}, 100)
         setTimeout(() => {title.textContent = "Theo Kinde_"}, 200)
         setTimeout(() => {title.textContent = "The_ Kinde"}, 300)
@@ -83,6 +84,7 @@ function changeHomeTitle(condition){
         setTimeout(() => {title.textContent = "T K_"}, 1000)
         setTimeout(() => {title.textContent = "T K"}, 1100)
     }else if (condition == "regen"){
+        console.log("Expanding")
         setTimeout(() => {title.textContent = "T K"}, 100)
         setTimeout(() => {title.textContent = "T K_"}, 200)
         setTimeout(() => {title.textContent = "T_ Ki"}, 300)
